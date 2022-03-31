@@ -1,0 +1,57 @@
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: $break-point) {
+	.container {
+		max-width: $max-width;
+		@include center(block);
+	}
+
+	.centered {
+		@include center(block);
+	}
+
+	.row {
+		flex-direction: row;
+	}
+
+	[class^="col"] {
+		display: flex;
+		justify-content: center;
+		margin-top: 0;
+		align-items: center;
+	}
+
+	[class^="col"] + [class^="col"] {
+		margin-left: $gutter;
+	}
+
+	//create columns
+	@for $i from 1 through 12 {
+		.theme.col-#{$i} {
+			flex-basis: calc(100% / 12 * $i);
+		}
+	}
+
+	.nav {
+		flex-direction: row !important;
+		justify-content: flex-end;
+		align-items: center;
+		&-link {
+			flex-basis: 100px;
+		}
+	}
+
+	.btn {
+		padding: 10px 30px;
+	}
+
+	.btn + .btn {
+		margin-left: 10px;
+	}
+
+	.logo {
+		margin-left: initial;
+		margin-right: initial;
+	}
+}
