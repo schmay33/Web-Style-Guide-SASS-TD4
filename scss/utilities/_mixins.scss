@@ -1,11 +1,12 @@
 @mixin center($disp: block) {
-    display: $disp;
-    margin-left: auto;
-    margin-right: auto;
+	display: $disp;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @mixin flex($disp: flex, $dir: column, $wrap: nowrap) {
-    display: $disp;
-    flex-direction: $dir;
-    flex-wrap: $wrap;
+	display: $disp;
+	flex-direction: $dir;
+	flex-wrap: $wrap;
 }
+
